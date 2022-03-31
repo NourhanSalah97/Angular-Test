@@ -20,4 +20,7 @@ console.log(this.list)
 removeTask(id:number) {
 this.list=this.list.filter(item => item.id!==id);
 }
+Completed(item:string) {
+this.list[item].isCompleted=!this.list[item].isCompleted;
+}
 }

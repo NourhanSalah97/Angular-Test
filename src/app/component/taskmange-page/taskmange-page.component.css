@@ -7,3 +7,6 @@
     margin-left:20px;
    
 }
+.Completed {
+    text-decoration: line-through;
+}
