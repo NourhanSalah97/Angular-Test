@@ -1,6 +1,6 @@
 <div class="container">
-    <input type="text" class="form-control" placeholder="enter your task here">
-    <button class=" btn btn-primary" (click)="onClick()">Add</button>
+    <input type="text" class="form-control" placeholder="enter your task here" #task>
+    <button class=" btn btn-primary" (click)="onClick(task.value)">Add</button>
 </div>
 <div>
     <table class="table">
@@ -14,12 +14,12 @@
         </thead>
         <tbody>
     
-            <tr>
-                <td></td>
+            <tr *ngFor="let item of list">
+                <td>{{item.task}}</td>
                 <td></td>
             
                 
-                <td></td>
+                <td><button class="btn btn-danger" (click)="removeTask(item.id)">Remove Task</button></td>
             </tr>
         </tbody>
     </table>
