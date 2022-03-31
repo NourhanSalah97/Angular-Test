@@ -11,5 +11,7 @@ export class TaskmangePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+onClick() {
+  console.log('add task');
+}
 }
